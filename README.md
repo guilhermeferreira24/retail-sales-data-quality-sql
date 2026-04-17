@@ -194,18 +194,17 @@ WHERE o.quantity IS NULL;
 
 ## What I Learned
 
-- **`DENSE_RANK()` vs `RANK()`** — `DENSE_RANK()` avoids gaps when ties
-  occur, making it safer for top-N filtering per group
-- **Chained CTEs follow a logical pipeline** — the first CTE transforms
-  data row by row, the second aggregates it; neither step can be skipped
-- **`NULLIF(x, 0)` prevents division-by-zero errors** — a clean pattern
-  when dividing by columns that may contain zero
-- **Unit price is not universal** — the same product can have different
-  effective prices across markets, regions, and discounts; grouping by all
-  pricing factors produces a more accurate imputation
-- **`::NUMERIC` cast is required for `ROUND()` in PostgreSQL** — columns
-  stored as `DOUBLE PRECISION` need explicit casting for decimal functions
-  to work correctly
+- **`DENSE_RANK()` vs `RANK()`** — `DENSE_RANK()` never skips rank numbers
+  on ties, making it the safer choice for top-N filtering per group
+- **Chained CTEs** — each CTE builds on the previous one; first transform,
+  then aggregate
+- **`NULLIF(x, 0)`** — prevents division-by-zero errors when dividing by
+  potentially zero columns
+- **Unit price varies by context** — the same product can have different
+  prices across markets, regions and discounts; always group by all
+  relevant pricing factors when imputing
+- **`::NUMERIC` cast in PostgreSQL** — required when using `ROUND()` on
+  `DOUBLE PRECISION` columns
 
 ***
 
