@@ -222,6 +222,14 @@ WHERE o.quantity IS NULL;
 | FUR-ADV-10004395 | 0 | EMEA | EMEA | $84.12 | NULL | 2 |
 
 ***
+## Key Insights
+
+- **Technology leads in revenue** — top product (Apple Smart Phone) at
+  $86,935.78, nearly 50% more than the top Furniture product
+- **High sales ≠ high profit** — Hoover Stove, White ranks 2nd in Office
+  Supplies sales but generates negative profit (-$2,180.63)
+- **Canon imageCLASS Copier** — ranks 5th in sales but is the most
+  profitable product across all categories ($25,199.93)
 
 ## Tools & Skills
 
