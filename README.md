@@ -231,7 +231,7 @@ WHERE o.quantity IS NULL;
 - **Canon imageCLASS Copier** — ranks 5th in sales but is the most
   profitable product across all categories ($25,199.93)
 
-  ***
+***
 
 ## Tools & Skills
 
