@@ -16,13 +16,6 @@ SELECT *
 FROM product_sale
 WHERE product_rank <= 5;
 
-
--- ================================================
-
-
--- Query 2: impute_missing_values
--- Estimate missing order quantities using average unit price
-
 WITH unit_price_calc AS (
     SELECT 
         product_id,
